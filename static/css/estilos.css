@@ -161,13 +161,17 @@ body {
     transform: scale(1.2);
   }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.image-gallery {
+  display: flex;
+  align-items: center;
 }
 
-li {
-  display: inline-block;
-  margin-right: 20px;
+.image-list {
+  display: flex;
+  overflow-x: auto;
+}
+
+.image-list img {
+  height: 150px;
+  margin-right: 10px;
 }
