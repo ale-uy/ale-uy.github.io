@@ -164,6 +164,8 @@ body {
 .image-gallery {
   display: flex;
   align-items: center;
+  border-radius: 0%;
+  border: 0px solid #fff;
 }
 
 .image-list {
