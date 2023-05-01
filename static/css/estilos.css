@@ -162,13 +162,20 @@ body {
   }
 
   .icon-row {
-    display: grid;
-    grid-template-columns: repeat(3, 100px); /* 3 columnas de 100px de ancho */
-    grid-gap: 10px; /* espacio entre columnas */
-    justify-content: center; /* centrar las columnas */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
- .icon-row img {
-    width: 100%;
-    height: auto;
+  .icon {
+    flex-grow: 1;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+  }
+
+   .icon img {
+     height: 80%;
+     width: 80%;
+     object-fit: contain;
   }
