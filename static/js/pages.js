@@ -1,11 +1,39 @@
-const linksContainer = document.querySelector('.links');
-const descriptionContainer = document.querySelector('.description');
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+const imageList = document.querySelector(".image-list");
+const images = document.querySelectorAll(".image-list img");
 
-linksContainer.addEventListener('scroll', () => {
-  const links = Array.from(linksContainer.children);
-  const linkWidth = links[0].getBoundingClientRect().width;
-  const containerWidth = linksContainer.getBoundingClientRect().width;
-  const currentLinkIndex = Math.floor(linksContainer.scrollLeft / linkWidth);
+let currentIndex = 0;
+let maxIndex = images.length - 1;
 
-  descriptionContainer.innerText = links[currentLinkIndex].dataset.description;
+images[currentIndex].classList.add("current");
+
+prevButton.addEventListener("click", () => {
+	images[currentIndex].classList.remove("current");
+	if (currentIndex === 0) {
+		currentIndex = maxIndex;
+	} else {
+		currentIndex--;
+	}
+	images[currentIndex].classList.add("current");
+	updateListPosition();
 });
+
+nextButton.addEventListener("click", () => {
+	images[currentIndex].classList.remove("current");
+	if (currentIndex === maxIndex) {
+		currentIndex = 0;
+	} else {
+		currentIndex++;
+	}
+	images[currentIndex].classList.add("current");
+	updateListPosition();
+});
+
+function updateListPosition() {
+	const currentImage = images[currentIndex];
+	const currentOffset = currentImage.offsetLeft - (imageList.offsetWidth - currentImage.offsetWidth) / 2;
+	imageList.style.transform = `translateX(-${currentOffset}px)`;
+}
+
+updateListPosition();
