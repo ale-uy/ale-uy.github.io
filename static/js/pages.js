@@ -1,39 +1,27 @@
-const prevButton = document.querySelector(".prev");
-const nextButton = document.querySelector(".next");
-const imageList = document.querySelector(".image-list");
-const images = document.querySelectorAll(".image-list img");
+// Obtener elementos de la lista y los proyectos
+const projectList = document.querySelector('.project-list');
+const projects = document.querySelectorAll('.project');
 
-let currentIndex = 0;
-let maxIndex = images.length - 1;
-
-images[currentIndex].classList.add("current");
-
-prevButton.addEventListener("click", () => {
-	images[currentIndex].classList.remove("current");
-	if (currentIndex === 0) {
-		currentIndex = maxIndex;
-	} else {
-		currentIndex--;
-	}
-	images[currentIndex].classList.add("current");
-	updateListPosition();
-});
-
-nextButton.addEventListener("click", () => {
-	images[currentIndex].classList.remove("current");
-	if (currentIndex === maxIndex) {
-		currentIndex = 0;
-	} else {
-		currentIndex++;
-	}
-	images[currentIndex].classList.add("current");
-	updateListPosition();
-});
-
-function updateListPosition() {
-	const currentImage = images[currentIndex];
-	const currentOffset = currentImage.offsetLeft - (imageList.offsetWidth - currentImage.offsetWidth) / 2;
-	imageList.style.transform = `translateX(-${currentOffset}px)`;
+// Función para mostrar un proyecto específico y ocultar los demás
+function showProject(projectId) {
+	projects.forEach(project => {
+		if (project.id === projectId) {
+			project.classList.remove('hidden');
+		} else {
+			project.classList.add('hidden');
+		}
+	});
 }
 
-updateListPosition();
+// Añadir evento click a los elementos de la lista
+projectList.addEventListener('click', e => {
+	const target = e.target;
+	if (target.tagName === 'LI') {
+		const projectId = target.getAttribute('data-project');
+		showProject(projectId);
+
+		// Cambiar la selección actual en la lista
+		projectList.querySelector('.selected').classList.remove('selected');
+		projectList.querySelector([data-project="${projectId}"]).classList.add('selected');
+	}
+});
