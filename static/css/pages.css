@@ -6,25 +6,61 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-  }
+}
 
 .container {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  background-color: transparent;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
 }
 
 .left-column {
-  flex-basis: 33.33%;
+    flex-basis: 33.33%;
 }
 
 .right-column {
-  flex-basis: 66.67%;
+    flex-basis: 66.67%;
 }
 
 h2 {
-  text-align: center;
-  margin-top: 50%;
-  transform: translateY(-50%);
+    text-align: center;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-container {
+    height: 80%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container img {
+    width: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.scroll-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-button {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.up-button {
+    transform: rotate(270deg);
+}
+
+.down-button {
+    transform: rotate(90deg);
 }
