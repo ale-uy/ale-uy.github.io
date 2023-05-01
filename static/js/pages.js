@@ -31,7 +31,7 @@ function selectProject(selectedItem) {
     showProject(projectId);
 
     // Agrandar el elemento seleccionado
-    selectedItem.style.transform = "scale(1.2)";
+    selectedItem.style.transform = "scale(1.4)";
 }
 
 // Añadir evento click a los elementos de la lista
