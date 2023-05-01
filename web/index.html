@@ -8,25 +8,38 @@
 	<h1><center>Proyectos WEB</center></h1>
 	<div class="container">
 		<div class="left-column">
-			<h2>Columna Izquierda</h2>
-			<div class="image-gallery">
-		<button class="prev">&lt;</button>
-		<div class="image-list">
-			<img src="https://picsum.photos/300/200/?random" alt="Image 1">
-			<img src="https://picsum.photos/300/200/?random" alt="Image 2">
-			<img src="https://picsum.photos/300/200/?random" alt="Image 3">
-			<img src="https://picsum.photos/300/200/?random" alt="Image 4">
-			<img src="https://picsum.photos/300/200/?random" alt="Image 5">
-		</div>
-		<button class="next">&gt;</button>
-	</div>
-
-	<script src="../static/js/pages.js"></script>
-
+			<h2>Lista de Proyectos</h2>
+			<ul class="project-list">
+				<li data-project="project-1" class="selected">Proyecto 1</li>
+				<li data-project="project-2">Proyecto 2</li>
+				<li data-project="project-3">Proyecto 3</li>
+				<li data-project="project-4">Proyecto 4</li>
+				<li data-project="project-5">Proyecto 5</li>
+			</ul>
 		</div>
 		<div class="right-column">
-			<h2>Columna Derecha</h2>
+			<div id="project-1" class="project">
+				<h2>Proyecto 1</h2>
+				<p>Descripción del Proyecto 1</p>
+			</div>
+			<div id="project-2" class="project hidden">
+				<h2>Proyecto 2</h2>
+				<p>Descripción del Proyecto 2</p>
+			</div>
+			<div id="project-3" class="project hidden">
+				<h2>Proyecto 3</h2>
+				<p>Descripción del Proyecto 3</p>
+			</div>
+			<div id="project-4" class="project hidden">
+				<h2>Proyecto 4</h2>
+				<p>Descripción del Proyecto 4</p>
+			</div>
+			<div id="project-5" class="project hidden">
+				<h2>Proyecto 5</h2>
+				<p>Descripción del Proyecto 5</p>
+			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="../static/js/pages.js"></script>
 </body>
 </html>
