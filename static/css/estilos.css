@@ -161,19 +161,14 @@ body {
     transform: scale(1.2);
   }
 
-.image-gallery {
-  display: flex;
-  align-items: center;
-  border-radius: 0%;
-  border: 0px solid #fff;
-}
+  .icon-row {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 columnas de 100px de ancho */
+    grid-gap: 10px; /* espacio entre columnas */
+    justify-content: center; /* centrar las columnas */
+  }
 
-.image-list {
-  display: flex;
-  overflow-x: auto;
-}
-
-.image-list img {
-  height: 150px;
-  margin-right: 10px;
-}
+ .icon-row img {
+    width: 100%;
+    height: auto;
+  }
