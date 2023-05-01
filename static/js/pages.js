@@ -44,3 +44,43 @@ projectList.addEventListener('click', e => {
 
 // Seleccionar el primer proyecto de la lista al cargar la página
 selectProject(projectList.querySelector('li'));
+
+// función para cargar el contenido del archivo markdown
+function loadMarkdownFile(projectId) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '../static/md/project-' + projectId + '.md');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      // convierte el contenido markdown a HTML
+      var html = marked(xhr.responseText);
+      // inserta el HTML generado en el elemento correspondiente del DOM
+      document.getElementById('project-' + projectId).innerHTML = html;
+    } else {
+      console.error('Error al cargar el archivo markdown');
+    }
+  };
+  xhr.send();
+}
+
+// llama a la función loadMarkdownFile() cuando se seleccione un proyecto
+var projectListItems = document.querySelectorAll('.project-list li');
+for (var i = 0; i < projectListItems.length; i++) {
+  projectListItems[i].addEventListener('click', function(event) {
+    // cambia la clase 'selected' del proyecto seleccionado
+    var selectedListItem = document.querySelector('.project-list li.selected');
+    selectedListItem.classList.remove('selected');
+    event.target.classList.add('selected');
+    // carga el contenido del archivo markdown correspondiente
+    var projectId = event.target.getAttribute('data-project');
+    loadMarkdownFile(projectId);
+    // muestra el proyecto seleccionado y oculta los demás
+    var projects = document.querySelectorAll('.project');
+    for (var j = 0; j < projects.length; j++) {
+      if (projects[j].id === 'project-' + projectId) {
+        projects[j].classList.remove('hidden');
+      } else {
+        projects[j].classList.add('hidden');
+      }
+    }
+  });
+}
