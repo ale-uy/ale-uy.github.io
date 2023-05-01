@@ -9,19 +9,30 @@ body {
 }
 
 .container {
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    background-color: transparent;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .left-column {
-    flex-basis: 33.33%;
+  flex-basis: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .right-column {
-    flex-basis: 66.67%;
+  flex-basis: 66.67%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 
 h2 {
     text-align: center;
