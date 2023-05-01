@@ -29,48 +29,27 @@ h2 {
     transform: translateY(-50%);
 }
 
-.image-gallery {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.project-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
-.image-list {
-	display: flex;
-	align-items: center;
-	max-width: 500px;
-	overflow: hidden;
-	margin: 0 20px;
-}
-
-.image-list img {
-	flex: 0 0 300px;
-	margin-right: 10px;
-	border-radius: 50%;
-	transform: scale(0.7);
-	opacity: 0.5;
-	transition: transform 0.5s, opacity 0.5s;
-}
-
-.image-list img.current {
-	flex: 0 0 300px;
-	margin-right: 10px;
-	border-radius: 50%;
-	transform: scale(1);
-	opacity: 1;
-}
-
-.prev, .next {
-	background-color: #333;
-	color: #fff;
-	border: none;
-	font-size: 24px;
+.project-list li {
 	padding: 10px;
-	border-radius: 50%;
-	margin: 20px;
+	border: 1px solid white;
 	cursor: pointer;
 }
 
-.prev:hover, .next:hover {
-	background-color: #555;
+.project-list li.selected {
+	background-color: white;
+	color: black;
+}
+
+.project {
+	padding: 20px;
+}
+
+.project.hidden {
+	display: none;
 }
