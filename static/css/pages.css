@@ -17,13 +17,11 @@ body {
 
 .left-column {
   flex-basis: 33.33%;
-  background-color: #F2F2F2;
   border-right: 1px solid #C4C4C4;
 }
 
 .right-column {
   flex-basis: 66.67%;
-  background-color: #FFF;
   border-left: 1px solid #C4C4C4;
   border-top: 1px solid #C4C4C4;
   border-bottom: 1px solid #C4C4C4;
