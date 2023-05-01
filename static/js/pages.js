@@ -44,3 +44,4 @@ projectList.addEventListener('click', e => {
 
 // Seleccionar el primer proyecto de la lista al cargar la página
 selectProject(projectList.querySelector('li'));
+
