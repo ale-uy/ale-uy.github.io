@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Al Agua Cactus",
+    "description": "Juego hecho con el framework RpgmMaker de javascript, en el cual somos una chica que intenta llegar al agua en la playa, el objetivo es lograrlo sin que la capturen los chicos malos"
+  },
+  {
+    "name": "NegroJack",
+    "description": "Proyecto de un BlackJack hecho integramente con Javascript en el cual intentamos ganarle la partida al crupier del casino"
+  },
+  {
+    "name": "Proyecto 3",
+    "description": "Descripción del Proyecto 3"
+  },
+  {
+    "name": "Proyecto 4",
+    "description": "Descripción del Proyecto 4"
+  },
+  {
+    "name": "Proyecto 5",
+    "description": "Descripción del Proyecto 5"
+  }
+]
