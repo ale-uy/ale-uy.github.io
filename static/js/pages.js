@@ -78,4 +78,4 @@ xhttp.onreadystatechange = function() {
 		}
 	}
 };
-xhttp.open("GET", "../static/data/web.json", true);
+xhttp.open("GET", "../data/web.json", true);
