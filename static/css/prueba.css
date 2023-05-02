@@ -69,7 +69,7 @@ h2 {
 
 .project {
   padding: 20px;
-  height: 300px;
+  height: 100%;
   overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura */
 }
 
@@ -78,7 +78,7 @@ h2 {
 }
 
 .project-content {
-  height: 300px; /* altura fija */
+  height: 100%; /* altura fija */
   display: flex;
   flex-direction: column;
   justify-content: center;
