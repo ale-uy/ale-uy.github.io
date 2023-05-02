@@ -8,6 +8,10 @@ body {
     overflow: hidden;
 }
 
+p a {
+  color: red;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -69,17 +73,8 @@ h2 {
 
 .project {
   padding: 20px;
-  height: 100%;
-  overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura */
 }
 
 .project.hidden {
     display: none;
-}
-
-.project-content {
-  height: 100%; /* altura fija */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
