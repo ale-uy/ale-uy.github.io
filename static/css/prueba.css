@@ -16,27 +16,30 @@ body {
   height: 100vh;
   width: 100%;
   background-color: transparent;
-  align-items: flex-start; /* Alinea los elementos en la parte superior del contenedor */
+  align-items: flex-start;
   justify-content: center;
 }
 
 .left-column {
-  flex-basis: 33.33%;
+  flex-basis: 34%;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-self: self-start;
-  margin-top: 0;
+  margin-top: initial;
+  height: 100vh;
+  width: 100%;
 }
 
 .right-column {
-  flex-basis: 66.67%;
+  flex-basis: 66%;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-self: self-start;
-  margin-top: 0;
-  margin-top: auto; /* Empuja los elementos al fondo de la columna */
+  margin-top: initial;
+  height: 100vh;
+  width: 100%;
 }
 
 
