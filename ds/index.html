@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="icon" type="image/png" href="../static/img/ai.png" />
-    <title>Proyectos DS</title>
-  </head>
-  <body>
-    <h1>Proyectos Data Science</h1>
-    <h2>Pagina aun en construccion</h2>
-  </body>
+<head>
+	<title>Proyectos DS</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/pages.css">
+	<link rel="icon" type="image/png" href="../static/img/ai.png" />
+</head>
+<body>
+	<div class="container">
+		<div class="left-column">
+			<h2>Lista de Proyectos DS</h2>
+			<ul class="project-list">
+				<li data-project="project-1" class="selected">Automatizacion de EDA</li>
+			</ul>
+		</div>
+		<div class="right-column">
+			<div id="project-1" class="project">
+				<h2>Automation EDA</h2>
+				<p>Clase escrita en python para automatizar con parametros preestablecidos, el analisis exploratorio de datos previamente cargados en pandas. Para usarlo solo tiene que poner el archivo "automation_eda.py" en la carpeta de su proyecto, importarlo "import automation_eda" e instanciar un objeto "mi_data_frame = EDA(df)" donde df es el dataframe que ya a creado con pandas</p>
+				<p>Link: <a href="https://github.com/ale-uy/DataScience"> Automation_eda (codigo) </a></p>
+			</div>
+		</div>
+	</div>
+	<script src="/static/js/pages.js"></script>
+</body>
 </html>
