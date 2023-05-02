@@ -31,8 +31,9 @@ p a {
   align-items: center;
   align-self: self-start;
   margin-top: initial;
-  height: 100vh;
+  height: 60%;
   width: 100%;
+  justify-content: flex-start;
 }
 
 .right-column {
@@ -42,8 +43,9 @@ p a {
   align-items: center;
   align-self: self-start;
   margin-top: initial;
-  height: 100vh;
+  height: 60%;
   width: 100%;
+  justify-content: flex-end
 }
 
 
