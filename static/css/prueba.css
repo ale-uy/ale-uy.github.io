@@ -1,0 +1,69 @@
+body {
+    background: url('../img/fondo.gif') repeat;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #000000;
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+}
+
+.left-column {
+    flex-basis: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.right-column {
+    flex-basis: 66.67%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-list li {
+    padding: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.project-list li.selected {
+    background-color: white;
+    color: black;
+}
+
+.project {
+    padding: 20px;
+}
+
+.project.hidden {
+    display: none;
+}
