@@ -76,3 +76,10 @@ h2 {
 .project.hidden {
     display: none;
 }
+
+.project-content {
+  height: 300px; /* altura fija */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
