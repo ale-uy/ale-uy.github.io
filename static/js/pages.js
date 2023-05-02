@@ -44,38 +44,3 @@ projectList.addEventListener('click', e => {
 
 // Seleccionar el primer proyecto de la lista al cargar la página
 selectProject(projectList.querySelector('li'));
-
-//
-//
-// Carga el archivo JSON
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-		// Convierte los datos en un objeto JavaScript
-		var data = JSON.parse(this.responseText);
-
-		// Actualiza el contenido de la página con los datos del primer proyecto
-		document.getElementById("project-info").innerHTML = `
-			<h2>${data[0].name}</h2>
-			<p>${data[0].description}</p>
-		`;
-
-		// Agrega un listener de eventos para actualizar el contenido de la página cuando se haga clic en un proyecto
-		var projectList = document.getElementsByClassName("project-list")[0].getElementsByTagName("li");
-		for (var i = 0; i < projectList.length; i++) {
-			projectList[i].addEventListener("click", function() {
-				var projectIndex = this.getAttribute("data-project").replace("project-", "") - 1;
-				document.getElementById("project-info").innerHTML = `
-					<h2>${data[projectIndex].name}</h2>
-					<p>${data[projectIndex].description}</p>
-				`;
-
-				// Actualiza la clase "selected" en la lista de proyectos
-				var selectedProject = document.getElementsByClassName("selected")[0];
-				selectedProject.classList.remove("selected");
-				this.classList.add("selected");
-			});
-		}
-	}
-};
-xhttp.open("GET", "../data/web.json", true);
