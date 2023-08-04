@@ -166,16 +166,34 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-
+  
   .icon {
     flex-grow: 1;
     height: 100px;
     width: 100px;
     text-align: center;
+    transition: transform 0.5s ease-in-out; /* Agregar transición para el efecto */
+    transform-style: preserve-3d; /* Permitir transformaciones en 3D */
   }
-
-   .icon img {
-     height: 80%;
-     width: 80%;
-     object-fit: contain;
+  
+  .icon img {
+    height: 90%;
+    width: 90%;
+    object-fit: contain;
+  }
+  
+  /* Agregar reglas para el icono que deseas resaltar */
+  .icon.large-icon {
+    height: 90px;
+    width: 90px;
+  }
+  
+  .icon.large-icon img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .icon.large-icon:hover {
+    transform: rotateY(360deg); /* Girar 360 grados al hacer hover */
+    transition: transform 1.5s ease-in-out; /* Ajustar la duración de la transición */
   }
