@@ -16,12 +16,11 @@ p a {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: start;
+  align-content: center; /* Cambiar a center */
+  justify-content: center; /* Cambiar a center */
   height: 100vh;
   width: 100%;
   background-color: transparent;
-  align-items: flex-start;
-  justify-content: center;
 }
 
 .left-column {
@@ -29,10 +28,10 @@ p a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-self: flex-start; /* Cambiar a flex-start */
+  align-self: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar verticalmente */
   height: 60%;
   width: 100%;
-  justify-content: flex-start; /* Cambiar a flex-start */
 }
 
 .right-column {
@@ -40,10 +39,10 @@ p a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-self: flex-start; /* Cambiar a flex-start */
+  align-self: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar verticalmente */
   height: 60%;
   width: 100%;
-  justify-content: flex-start; /* Cambiar a flex-start */
 }
 
 h2 {
