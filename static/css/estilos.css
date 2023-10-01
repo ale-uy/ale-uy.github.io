@@ -119,6 +119,11 @@ body {
     background-image: url('../img/linkedin-icon.svg');
     background-size: contain;
   }
+
+  .boton-redondo.Kaggle {
+    background-image: url('../img/kaggle-ico.svg');
+    background-size: contain;
+  }
   
   .redes-sociales {
     position: fixed;
