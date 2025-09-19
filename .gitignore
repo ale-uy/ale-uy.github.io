@@ -1,0 +1,5 @@
+# .gitignore
+RESUME.md
+/.vscode
+/node_modules
+/dist
